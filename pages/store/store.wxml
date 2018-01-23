@@ -12,12 +12,12 @@
       <view>电话:</view>
       <input placeholder='请输入手机号' type='number' /> 
     </view>
-  <view class="section__title">省市区选择器</view>
-    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-      <view class="picker">
-        当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
-      </view>
-    </picker>
+    <view class="section__title">省市区选择器</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
   </view>
 </form>
 

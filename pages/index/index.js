@@ -52,7 +52,11 @@ Page({
     if(this.isInArray(openid) === true){
       console.log('普通用户');
       wx.request({
+<<<<<<< HEAD
         url: 'http://dev.ci.com/index.php/api/Wx_login/setUser',
+=======
+        url: 'http://dev.ci.com:8888/index.php/api/Wx_login/setUser',
+>>>>>>> 从mac出上传小程序代码
         method: 'POST',
         data: {
           'openid' : openid,

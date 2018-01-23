@@ -1,0 +1,33 @@
+{
+<<<<<<< HEAD
+  "pages":[
+    "pages/index/index",
+    "pages/home/home",
+    "pages/store/store",
+    "pages/admin/admin",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
+=======
+  "pages": [
+    "pages/store/store",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    
+    "pages/admin/admin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
+>>>>>>> 从mac出上传小程序代码

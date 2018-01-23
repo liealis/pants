@@ -1,0 +1,24 @@
+<!--pages/store/store.wxml-->
+<view>
+  <image></image>
+</view>
+<form bindsubmit="formSubmit">
+  <view class="form-content">
+    <view class='form-section'>
+      <view>姓名:</view>
+      <input placeholder="请输入姓名" focus="true" type='idcard'/><br/>  
+    </view>
+    <view class='form-section'>
+      <view>电话:</view>
+      <input placeholder='请输入手机号' type='number' /> 
+    </view>
+    <view class="section__title">省市区选择器</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+        </view>
+      </picker>
+  </view>
+</form>
+
+

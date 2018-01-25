@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     motto: 'Hello',
@@ -46,11 +45,11 @@ Page({
   },
   onReady: function(){
     var openid = app.globalData.openid;
+    // console.log(openid)
     var userInfo = this.data.userInfo;
-    console.log(userInfo)
     var scene = app.globalData.scene;
     if(this.isInArray(openid) === true){
-      console.log('普通用户');
+      // console.log('普通用户');
       wx.request({
         url: 'http://dev.ci.com/index.php/api/Wx_login/setUser',
         method: 'POST',
@@ -63,12 +62,12 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
         },
         success: res=>{
-          console.log(res)
+          // console.log(res)
           setTimeout(function () {
             wx.redirectTo({
               url: '/pages/store/store',
             })
-          }, 1000)
+          }, 100)
         }
       })
     }else{
@@ -81,7 +80,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
+    // console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

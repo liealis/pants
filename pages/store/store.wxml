@@ -1,24 +1,28 @@
 <!--pages/store/store.wxml-->
 <view>
-  <image></image>
+  <image style="width: 750rpx; height: 750rpx; background-color: #eeeeee;" src='https://img.tjzmall.com/upload/goods/imgs/20170612142552_514-big.jpg'></image>
 </view>
 <form bindsubmit="formSubmit">
   <view class="form-content">
     <view class='form-section'>
       <view>姓名:</view>
-      <input placeholder="请输入姓名" focus="true" type='idcard'/><br/>  
+      <input placeholder="请输入姓名" focus="true" type='text'name="username" bindblur='checkName' focus='{{nameFocus}}' maxlength='20' value="{{nameValue}}"/> 
     </view>
     <view class='form-section'>
       <view>电话:</view>
-      <input placeholder='请输入手机号' type='number' /> 
+      <input placeholder='请输入手机号' type='number' name="mobile" bindblur='checkMobile' maxlength='11'/> 
     </view>
-  <view class="section__title">省市区选择器</view>
-    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+  <view class="section__title">省市区</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" style='border:1px solid #000'>
       <view class="picker">
-        当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+        {{region[0]}}，{{region[1]}}，{{region[2]}}
       </view>
     </picker>
   </view>
-</form>
-
+ <view class='form-section'>
+      <view>具体地址:</view>
+      <input placeholder="请输入详细地址" type='text'name="address"/><br/>  
+    </view>
+  <button form-type="submit">Submit</button>
+</form> 
 
